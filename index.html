@@ -99,7 +99,9 @@
         icon.addEventListener('click', (event) => {
           const url = icon.getAttribute('data-url');
           if (icon.classList.contains('shopping-cart')) {
-            window.location.href = url;
+            setTimeout(() => {
+              window.location.href = url;
+            }, 700); // 0.7 second pause for shopping cart redirection
           } else {
             setTimeout(() => {
               window.open(url, '_blank');
